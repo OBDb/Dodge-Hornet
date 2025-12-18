@@ -3,3 +3,12 @@ test_cases:
 - expected_values:
     ODO: 17469
   response: 18DAF1100641A60002AA62
+- expected_values:
+    ODO: 17479
+  response: 18DAF1100641A60002AAC6
+- expected_values:
+    ODO: 17480
+  response: 18DAF1100641A60002AAD0
+- expected_values:
+    ODO: 17481
+  response: 18DAF1100641A60002AADA
