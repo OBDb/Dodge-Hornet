@@ -4,6 +4,9 @@ test_cases:
     DODGE_GEAR_CURRENT: 2
   response: 18DAF1180462051A02
 - expected_values:
+    DODGE_GEAR_CURRENT: 4
+  response: 18DAF1180462051A04
+- expected_values:
     DODGE_GEAR_CURRENT: 6
   response: 18DAF1180462051A06
 - expected_values:
