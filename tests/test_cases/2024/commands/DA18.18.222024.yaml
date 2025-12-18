@@ -1,0 +1,8 @@
+command_id: DA18.18.222024
+test_cases:
+- expected_values:
+    DODGE_TIRE_SIZE: 3683
+  response: |-
+    18DAF118100F622024187A02
+    18DAF11821C9086112040E63
+    18DAF118224230

@@ -1,0 +1,5 @@
+command_id: DA18.18.22F158
+test_cases:
+- expected_values:
+    DODGE_MODEL_YEAR: 2024
+  response: 18DAF1180762F158187A0902

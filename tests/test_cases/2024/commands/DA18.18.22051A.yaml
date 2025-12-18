@@ -1,0 +1,6 @@
+command_id: DA18.18.22051A
+test_cases:
+- expected_values:
+    DODGE_GEAR_CURRENT: 12
+    DODGE_GEAR_DESIRED: 12
+  response: 18DAF1180462051ACC
