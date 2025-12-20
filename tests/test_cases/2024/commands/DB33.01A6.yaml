@@ -12,3 +12,18 @@ test_cases:
 - expected_values:
     ODO: 17481
   response: 18DAF1100641A60002AADA
+- expected_values:
+    ODO: 17496
+  response: 18DAF1100641A60002AB70
+- expected_values:
+    ODO: 17497
+  response: 18DAF1100641A60002AB7A
+- expected_values:
+    ODO: 17500
+  response: 18DAF1100641A60002AB98
+- expected_values:
+    ODO: 17501
+  response: 18DAF1100641A60002ABA2
+- expected_values:
+    ODO: 17502
+  response: 18DAF1100641A60002ABAC
