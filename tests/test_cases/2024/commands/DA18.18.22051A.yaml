@@ -1,8 +1,8 @@
 command_id: DA18.18.22051A
 test_cases:
 - expected_values:
-    DODGE_GEAR_SHFT: NEUTRAL
-  response: 18DAF1180462051A00
+    DODGE_GEAR_CURRENT: 1
+  response: 18DAF1180462051A01
 - expected_values:
     DODGE_GEAR_CURRENT: 12
     DODGE_GEAR_DESIRED: 12
