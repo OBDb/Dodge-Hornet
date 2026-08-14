@@ -1,0 +1,14 @@
+command_id: DA10.10.22192D|din=03
+test_cases:
+- expected_values:
+    DODGE_GEAR_ECU: 5
+  response: 18DAF1100562192D0548
+- expected_values:
+    DODGE_GEAR_ECU: 5
+  response: 18DAF1100562192D0590
+- expected_values:
+    DODGE_GEAR_ECU: 5
+  response: 18DAF1100562192D05C0
+- expected_values:
+    DODGE_GEAR_ECU: 5
+  response: 18DAF1100562192D05D8
