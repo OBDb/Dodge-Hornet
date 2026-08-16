@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     DODGE_VGT_ACT: 0.03967
   response: 18DAF110056218A0001A
+- expected_values:
+    DODGE_VGT_ACT: 0.0412
+  response: 18DAF110056218A0001B

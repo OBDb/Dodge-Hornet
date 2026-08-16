@@ -6,3 +6,6 @@ test_cases:
 - expected_values:
     DODGE_BATT_V_BCM: 12.6
   response: 18DAF140046210047E
+- expected_values:
+    DODGE_BATT_V_BCM: 12.7
+  response: 18DAF140046210047F
