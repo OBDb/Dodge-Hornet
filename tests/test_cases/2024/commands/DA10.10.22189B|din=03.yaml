@@ -1,8 +1,8 @@
 command_id: DA10.10.22189B|din=03
 test_cases:
 - expected_values:
-    DODGE_SWIRL_CMD: -100
+    HORNET_SWIRL_CMD: -100
   response: 18DAF1100562189B2AAA
 - expected_values:
-    DODGE_SWIRL_CMD: -100
+    HORNET_SWIRL_CMD: -100
   response: 18DAF1100562189B2C4E
