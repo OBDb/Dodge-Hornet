@@ -1,9 +1,13 @@
 command_id: DA18.18.22051A
 test_cases:
 - expected_values:
-    DODGE_GEAR_CURRENT: 1
+    HORNET_GEAR_CURRENT: null
+    HORNET_GEAR_DESIRED: null
+  response: 18DAF1180462051A00
+- expected_values:
+    HORNET_GEAR_CURRENT: 1
   response: 18DAF1180462051A01
 - expected_values:
-    DODGE_GEAR_CURRENT: 12
-    DODGE_GEAR_DESIRED: 12
+    HORNET_GEAR_CURRENT: 12
+    HORNET_GEAR_DESIRED: 12
   response: 18DAF1180462051ACC

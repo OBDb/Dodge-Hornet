@@ -1,4 +1,188 @@
 { "commands": [
-
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"21": "18"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_TOT", "path": "Transmission", "fmt": { "len": 16, "max": 512, "min": -512, "div": 4, "sign": true, "unit": "fahrenheit" }, "name": "Transmission oil temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1000"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_RPM_DA10", "path": "Engine", "fmt": { "len": 16, "max": 16383, "div": 4, "unit": "rpm" }, "name": "Engine RPM"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "1002"}, "freq": 30, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_ENGINE_STATUS", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine operational status"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "1003"}, "freq": 5, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_ECT_ECU", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "1009"}, "freq": 3600, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_WATER_FUEL_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance with water in fuel warning"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "189B"}, "freq": 2, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_SWIRL_CMD", "path": "Engine", "fmt": { "len": 16, "max": 100, "min": -100, "div": 100, "add": -327.68, "unit": "percent" }, "name": "Swirl actuator command"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "189F"}, "freq": 2, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_VGT_CMD", "path": "Engine", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "Turbocharger vane position commanded"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "18A0"}, "freq": 2, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_VGT_ACT", "path": "Engine", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "Turbocharger vane position actual"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "fcm1": true, "din": "03", "cmd": {"22": "18A4"}, "freq": 3600, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_REGEN_TOTAL", "path": "Emissions", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Particulate filter regeneration starts, total"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "18A5"}, "freq": 60, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_REGEN_INTERRUPTED", "path": "Emissions", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Particulate filter regeneration interruptions, total"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "18AE"}, "freq": 3600, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_REGEN_CONSEC_INTERRUPTED", "path": "Emissions", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Particulate filter regeneration interruptions, consecutive"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "18D0"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_MPROP_CMD", "path": "Engine", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "M-Prop injection command"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "18E8"}, "freq": 5, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_DPF_FLOW_RES", "path": "Emissions", "fmt": { "len": 16, "max": 6.55, "div": 10000, "unit": "scalar" }, "name": "Particulate filter flow resistance"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "18EC"}, "freq": 5, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_FORCED_REGEN", "path": "Emissions", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Forced regen state"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "18ED"}, "freq": 2, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_LAMBDA_DPF_DS", "path": "Emissions", "fmt": { "len": 16, "max": 25, "div": 512, "unit": "percent" }, "name": "Lambda downstream DPF O2 concentration"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "190B"}, "freq": 0.25,
+  "signals": [
+    {"id": "HORNET_VSS_ECU", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Vehicle speed, engine module", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "192D"}, "freq": 1, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_GEAR_ECU", "path": "Transmission", "fmt": { "len": 8, "max": 9, "unit": "scalar" }, "name": "Gear engaged"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1935"}, "freq": 5,
+  "signals": [
+    {"id": "HORNET_IAT_TURBO", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "IAT post-intercooler"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "193F"}, "freq": 5,
+  "signals": [
+    {"id": "HORNET_MAF_TEMP", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Mass airflow sensor temperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1946"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_RAIL_PRESS_CMD", "path": "Engine", "fmt": { "len": 16, "max": 3000, "div": 20, "unit": "bars" }, "name": "Fuel rail pressure commanded"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1947"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_RAIL_PRESS", "path": "Engine", "fmt": { "len": 16, "max": 3000, "div": 20, "unit": "bars" }, "name": "Fuel rail pressure measured"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "194F"}, "freq": 30, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_OIL_PUMP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Variable oil pump position"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "1955"}, "freq": 30, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_BATT_V_ECU", "path": "Battery", "fmt": { "len": 16, "max": 20, "div": 2000, "unit": "volts" }, "name": "Battery voltage"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "195A"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3800"}, "freq": 2,
+  "signals": [
+    {"id": "HORNET_FUEL_CORR_CYL1", "path": "Engine", "fmt": { "len": 16, "max": 5, "min": -5, "div": 100, "sign": true, "unit": "milligramsPerStroke" }, "name": "Fuel correction cylinder 1"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3801"}, "freq": 2,
+  "signals": [
+    {"id": "HORNET_FUEL_CORR_CYL2", "path": "Engine", "fmt": { "len": 16, "max": 5, "min": -5, "div": 100, "sign": true, "unit": "milligramsPerStroke" }, "name": "Fuel correction cylinder 2"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3802"}, "freq": 2,
+  "signals": [
+    {"id": "HORNET_FUEL_CORR_CYL3", "path": "Engine", "fmt": { "len": 16, "max": 5, "min": -5, "div": 100, "sign": true, "unit": "milligramsPerStroke" }, "name": "Fuel correction cylinder 3"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3803"}, "freq": 2,
+  "signals": [
+    {"id": "HORNET_FUEL_CORR_CYL4", "path": "Engine", "fmt": { "len": 16, "max": 5, "min": -5, "div": 100, "sign": true, "unit": "milligramsPerStroke" }, "name": "Fuel correction cylinder 4"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3813"}, "freq": 3600,
+  "signals": [
+    {"id": "HORNET_OIL_DEGRAD", "path": "Engine", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 65535, "unit": "percent" }, "name": "Engine oil degradation"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3914"}, "freq": 5,
+  "signals": [
+    {"id": "HORNET_CATALYST_INLET_T", "path": "Emissions", "fmt": { "len": 16, "max": 900, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Catalyst inlet temperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3917"}, "freq": 5,
+  "signals": [
+    {"id": "HORNET_EGR_COOLER_T", "path": "Engine", "fmt": { "len": 16, "max": 900, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Exhaust gas recirculation cooler outlet temperature"}
+  ]},
+{ "hdr": "DA18", "dbg": true, "cmd": {"22": "1D07"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_AT_OUTPUT_RPM", "path": "Transmission", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "rpm" }, "name": "Transmission output speed"}
+  ]},
+{ "hdr": "DA18", "dbg": true, "cmd": {"22": "1D08"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_AT_INPUT_RPM", "path": "Transmission", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "rpm" }, "name": "Transmission input speed"}
+  ]},
+{ "hdr": "DA18", "dbg": true, "cmd": {"22": "1D09"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_ATF_T_3", "path": "Transmission", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Automatic transmission temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "DA18", "dbg": true, "cmd": {"22": "1D12"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_GEAR_3", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "04FE"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_ATF_T_4THGEN", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "051A"}, "freq": 0.5, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_GEAR_DESIRED", "path": "Transmission", "fmt": {          "len": 4, "max": 15, "nullmin": 0, "nullmax": 13, "unit": "scalar" }, "name": "Desired gear"},
+    {"id": "HORNET_GEAR_CURRENT", "path": "Transmission", "fmt": {"bix": 4, "len": 4, "max": 15, "nullmin": 0, "nullmax": 13, "unit": "scalar" }, "name": "Current gear"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1018"}, "freq": 2,
+  "signals": [
+    {"id": "HORNET_TCM_TORQUE", "path": "Transmission", "fmt": { "len": 16, "max": 2000, "min": -500, "add": -500, "unit": "newtonMeters" }, "name": "Transmission reported torque"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "2024"}, "freq": 86400, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_TIRE_SIZE", "path": "Tires", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "millimeters" }, "name": "Tire size"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2102"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_GEARBOX_RPM", "path": "Transmission", "fmt": { "len": 16, "max": 16383, "div": 4, "unit": "rpm" }, "name": "Gearbox output speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1B"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_WSS_RR", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1C"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_WSS_RL", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1D"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_WSS_FR", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1E"}, "freq": 1,
+  "signals": [
+    {"id": "HORNET_WSS_FL", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "F158"}, "freq": 86400, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_MODEL_YEAR", "path": "Details", "fmt": { "len": 8, "max": 2225, "add": 2000, "unit": "scalar" }, "name": "Model year"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "cmd": {"22": "1004"}, "freq": 30, "dbgfilter": { "to": 2023, "from": 2025 },
+  "signals": [
+    {"id": "HORNET_BATT_V_BCM", "path": "Battery", "fmt": { "len": 8, "max": 25, "div": 10, "unit": "volts" }, "name": "Battery voltage, BCM"}
+  ]}
 ]
 }
